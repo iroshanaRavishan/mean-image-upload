@@ -6,8 +6,7 @@ import { Profile } from "src/app/models/Profile";
 
 @Component({
   selector: "app-all-profiles",
-  templateUrl: "./all-profiles.component.html",
-  styleUrls: ["./all-profiles.component.css"],
+  templateUrl: "./all-profiles.component.html"
 })
 export class AllProfilesComponent implements OnInit, OnDestroy {
   profiles: Profile[] = [];

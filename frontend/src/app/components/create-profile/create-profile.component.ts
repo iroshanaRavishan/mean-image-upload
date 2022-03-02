@@ -6,8 +6,7 @@ import { ProfileService } from "src/app/services/profile.service";
 
 @Component({
   selector: "app-create-profile",
-  templateUrl: "./create-profile.component.html",
-  styleUrls: ["./create-profile.component.css"],
+  templateUrl: "./create-profile.component.html"
 })
 export class CreateProfileComponent implements OnInit {
   form: FormGroup;
