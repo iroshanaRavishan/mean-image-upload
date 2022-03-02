@@ -34,13 +34,11 @@ export class ProfileService {
     return this.profiles$.asObservable();
   }
 
-  addProfile(name: string, image: File): void {
+  addProfile(name: string, image: File) {
     const profileData = new FormData();
     profileData.append("name", name);
     profileData.append("image", image, name);
-    this.http
-      .post<{ profile: Profile }>(this.url, profileData)
-      .subscribe((profileData) => {
+    this.http.post<{ profile: Profile }>(this.url, profileData).subscribe((profileData) => {
         const profile: Profile = {
           _id: profileData.profile._id,
           name: name,

@@ -16,9 +16,7 @@ export class AllProfilesComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.profilesService.getProfiles();
-    this.profileSubscription = this.profilesService
-      .getProfilesStream()
-      .subscribe((profiles: Profile[]) => {
+    this.profileSubscription = this.profilesService.getProfilesStream().subscribe((profiles: Profile[]) => {
         this.profiles = profiles;
       });
   }
